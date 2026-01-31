@@ -1,0 +1,114 @@
+:root{
+  --bg: #f3fbff;
+  --container: 1100px;
+  --accent: #ff7a5a;
+  --accent-2: #ffd37a;
+  --muted: #5b6b73;
+  --card: #ffffff;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(17,75,95,0.06);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#0b2b34;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  width:95%;
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 16px;
+}
+
+/* Header */
+.site-header{
+  background: linear-gradient(90deg, #fff 0%, #fff 70%);
+  border-bottom: 1px solid rgba(10,20,30,0.04);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 0;
+}
+.logo{font-size:20px; margin:0;}
+.nav a{margin-right:14px; color:var(--muted); text-decoration:none;}
+.nav .btn{vertical-align:middle}
+
+/* Hero */
+.hero{
+  padding:36px 0;
+}
+.hero-inner{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.hero-text{flex:1; min-width:260px;}
+.hero-text h2{font-size:34px; margin:6px 0 8px; color:#114b5f;}
+.lead{color:var(--muted); margin-bottom:18px;}
+.cta-row .btn{margin-right:12px}
+
+/* Buttons */
+.btn{
+  border:0; padding:12px 18px; border-radius:8px; cursor:pointer; font-weight:600;
+}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#ff8d6e); color:white; box-shadow:var(--shadow);}
+.btn-ghost{background:transparent; color:#114b5f; border:2px solid rgba(17,75,95,0.06)}
+
+/* hero art */
+.hero-art{width:420px; max-width:46%; min-width:260px;}
+.cartoon{width:100%; height:auto; display:block;}
+
+/* sections */
+.section{padding:28px 0}
+.muted{color:var(--muted); margin-top:8px; max-width:720px}
+
+/* Impact */
+.impact{background:linear-gradient(180deg,#fff8f0,#f7fbff); padding:28px 0;}
+.impact-grid{display:flex; gap:18px; justify-content:space-between; flex-wrap:wrap}
+.impact-card{background:var(--card); border-radius:12px; padding:18px; flex:1; min-width:180px; text-align:center; box-shadow:var(--shadow)}
+.impact-card h4{font-size:28px; margin:6px 0}
+
+/* Donate section */
+.donate-section{text-align:center}
+.donate-section .btn{margin-top:12px}
+
+/* Footer */
+.site-footer{padding:18px 0; text-align:center; color:var(--muted)}
+
+/* Modal */
+.modal{
+  position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+  background:rgba(2,10,12,0.45); z-index:60;
+}
+.modal-inner{
+  width:94%; max-width:520px; background:var(--card); border-radius:12px; padding:18px;
+  box-shadow:0 10px 30px rgba(6,40,60,0.16);
+}
+.hidden{display:none}
+.modal-close{background:transparent; border:0; font-size:22px; float:right; cursor:pointer}
+.modal-inner h3{margin-top:6px}
+.modal-inner form label{display:block; margin:10px 0; color:#20343b}
+.modal-inner input[type="text"], .modal-inner input[type="number"], .modal-inner input[type="tel"]{
+  width:100%; padding:10px; border-radius:8px; border:1px solid #e6eef2; margin-top:6px;
+}
+.form-actions{display:flex; gap:8px; margin-top:12px; justify-content:flex-end}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero-inner{flex-direction:column-reverse; align-items:center}
+  .hero-art{max-width:90%}
+  .nav{display:none}
+}
